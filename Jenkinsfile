@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent k8s
     stages{
         stage'Build'{
             steps{
