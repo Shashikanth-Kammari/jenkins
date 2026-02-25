@@ -35,6 +35,7 @@ pipeline {
                 """
                 sleep(5)
                 }
+            }
             steps{
                 echo "Hello ${params.PERSON}"
 
@@ -49,4 +50,3 @@ pipeline {
             }
         }
     }
-}
