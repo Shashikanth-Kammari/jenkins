@@ -46,6 +46,8 @@ pipeline {
                 echo "Choice: ${params.CHOICE}"
 
                 echo "Password: ${params.PASSWORD}"
+
+                echo "this is the msg"
             }
             }
         }
@@ -58,3 +60,4 @@ pipeline {
             // Add notification (e.g., Slack, Email) here
         }
     }
+}
