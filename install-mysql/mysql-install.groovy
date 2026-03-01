@@ -49,4 +49,12 @@ pipeline {
             }
             }
         }
+        post {
+        always {
+            echo 'This always runs, regardless of the build result.'
+        }
+        success {
+            echo 'Pipeline succeeded!'
+            // Add notification (e.g., Slack, Email) here
+        }
     }
