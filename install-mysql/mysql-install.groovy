@@ -1,6 +1,6 @@
 pipeline {
     agent {
-        label 'my-defined-label'
+        label 'Agent-1'
     }
     parameters {
         string(name: 'PERSON', defaultValue: 'Mr Shashi', description: 'This is your first jenkins job ?')
