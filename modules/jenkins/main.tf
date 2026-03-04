@@ -11,3 +11,16 @@ resource "aws_instance" "jenkins" {
   }
 
 }
+
+provider "aws" {
+  region = "ap-south-1"
+}
+
+module "jenkins_server" {
+
+  source        = "./modules/jenkins"
+  ami           = "ami-0f58b397bc5c1f2e8"
+  instance_type = "t2.micro"
+  key_name      = "terraform-key"
+
+}
