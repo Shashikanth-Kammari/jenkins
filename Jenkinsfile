@@ -13,7 +13,7 @@ pipeline {
         }
         stage'pushToDockerImage'{
             steps{
-                sh """ docker push 'dockerusername" "password" "url"
+                sh 'docker push 'dockerusername' 'password' 'url''
             }
         }
         stage'DeployToK8s'{
