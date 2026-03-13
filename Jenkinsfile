@@ -11,9 +11,14 @@ pipeline {
                 sh 'echo this is test'
             }
         }
-        stage'Deploy'{
+        stage'pushToDockerImage'{
             steps{
-                sh 'echo this is deploy'
+                sh """ docker push 'dockerusername" "password" "url"
+            }
+        }
+        stage'DeployToK8s'{
+            steps{
+               sh ' deploy to k8s from the docker hub image'
             }
         }
     }
