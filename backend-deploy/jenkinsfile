@@ -1,0 +1,37 @@
+pipeline{
+    agent{
+        labes 'AGENT-1'
+    }
+    options{
+        timeout(time: 30, unit:'MINUTES')
+        disableConcurrentBuilds()
+        ansiColor('xterm')
+    }
+    parameters{
+        string(name: 'appVersion', defaultValue:'1.0.0', description: 'what is the application version')
+    }
+    environments{
+        def appVersion= '' //variable declaration
+        nexusUrl = 'Need to give Nxus repo url here'
+    }
+    stages{
+        stage('print application version'){
+            steps{
+                script{
+                    echo "application version is : ${params.appVersion}"
+                }
+            }
+        }
+        stage('init'){
+            steps{
+                script{
+                    cd terraform
+                    """ terraform init  
+                    """
+                }
+
+            }
+        }
+    }
+
+}
