@@ -24,12 +24,10 @@ pipeline{
         }
         stage('init'){
             steps{
-                script{
+                sh """
                     cd terraform
                     terraform init  
-                    
-                }
-
+                """
             }
         }
     }
