@@ -11,9 +11,9 @@ if [[ $EUID -ne 0 ]]; then
     exit 1
 fi
 
-# Update packages
-echo "Updating system packages..."
-yum update -y
+# # Update packages
+# echo "Updating system packages..."
+# yum update -y
 
 # Install Java 17
 echo "Installing Amazon Corretto Java 17..."
