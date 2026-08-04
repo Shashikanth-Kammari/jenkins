@@ -59,5 +59,9 @@ pipeline {
             echo 'Pipeline succeeded!'
             // Add notification (e.g., Slack, Email) here
         }
+        failure {
+            echo 'Pipeline failed!'
+            // Add notification (e.g., Slack, Email) here
+        }
     }
 }
