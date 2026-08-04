@@ -2,6 +2,11 @@ pipeline {
     agent {
         label 'Agent-1'
     }
+    environment {
+        EC2_IP ="Need to gieve EC2 IP here"
+        environment = "dev"
+        brand = "Mcom"
+    }
     stages {
         stage('Build') {
             steps {
