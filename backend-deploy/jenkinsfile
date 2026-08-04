@@ -12,7 +12,7 @@ pipeline{
     }
     environments{
         def appVersion= '' //variable declaration
-        nexusUrl = 'Need to give Nxus repo url here' #we need to give nexus repo url here
+        nexusUrl = 'Need to give Nxus repo url here' 
     }
     stages{
         stage('print application version'){
